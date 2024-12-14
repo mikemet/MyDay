@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MyDay", "MyDay.shproj", "{F3AD96D0-0800-4C26-9040-0A3F22FEF3E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csconsMyDay", "csconsMyDay\csconsMyDay.csproj", "{9978400C-383C-4F3D-ABDB-5B4C87B9B56C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9978400C-383C-4F3D-ABDB-5B4C87B9B56C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9978400C-383C-4F3D-ABDB-5B4C87B9B56C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9978400C-383C-4F3D-ABDB-5B4C87B9B56C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9978400C-383C-4F3D-ABDB-5B4C87B9B56C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		MyDay.projitems*{f3ad96d0-0800-4c26-9040-0a3f22fef3e7}*SharedItemsImports = 13
+	EndGlobalSection
+EndGlobal
