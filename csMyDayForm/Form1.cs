@@ -6,5 +6,10 @@ namespace csMyDayForm
         {
             InitializeComponent();
         }
+
+        private void btnSelect_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -48,6 +48,7 @@
             btnSelect.TabIndex = 1;
             btnSelect.Text = "Select Day";
             btnSelect.UseVisualStyleBackColor = true;
+            btnSelect.Click += btnSelect_Click;
             // 
             // tbxDay
             // 
