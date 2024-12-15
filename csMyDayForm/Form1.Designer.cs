@@ -28,12 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            tbxInput = new TextBox();
+            btnSelect = new Button();
+            tbxDay = new TextBox();
+            SuspendLayout();
+            // 
+            // tbxInput
+            // 
+            tbxInput.Location = new Point(323, 116);
+            tbxInput.Name = "tbxInput";
+            tbxInput.Size = new Size(100, 29);
+            tbxInput.TabIndex = 0;
+            // 
+            // btnSelect
+            // 
+            btnSelect.Location = new Point(323, 186);
+            btnSelect.Name = "btnSelect";
+            btnSelect.Size = new Size(100, 41);
+            btnSelect.TabIndex = 1;
+            btnSelect.Text = "Select Day";
+            btnSelect.UseVisualStyleBackColor = true;
+            // 
+            // tbxDay
+            // 
+            tbxDay.Location = new Point(323, 248);
+            tbxDay.Name = "tbxDay";
+            tbxDay.Size = new Size(100, 29);
+            tbxDay.TabIndex = 2;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(9F, 21F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(tbxDay);
+            Controls.Add(btnSelect);
+            Controls.Add(tbxInput);
+            Name = "Form1";
+            Text = "Form1";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private TextBox tbxInput;
+        private Button btnSelect;
+        private TextBox tbxDay;
     }
 }
