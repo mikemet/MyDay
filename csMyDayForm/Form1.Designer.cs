@@ -35,14 +35,14 @@
             // 
             // tbxInput
             // 
-            tbxInput.Location = new Point(323, 116);
+            tbxInput.Location = new Point(166, 126);
             tbxInput.Name = "tbxInput";
             tbxInput.Size = new Size(100, 29);
             tbxInput.TabIndex = 0;
             // 
             // btnSelect
             // 
-            btnSelect.Location = new Point(323, 186);
+            btnSelect.Location = new Point(166, 196);
             btnSelect.Name = "btnSelect";
             btnSelect.Size = new Size(100, 41);
             btnSelect.TabIndex = 1;
@@ -52,7 +52,7 @@
             // 
             // tbxDay
             // 
-            tbxDay.Location = new Point(323, 248);
+            tbxDay.Location = new Point(166, 258);
             tbxDay.Name = "tbxDay";
             tbxDay.Size = new Size(100, 29);
             tbxDay.TabIndex = 2;
@@ -61,7 +61,7 @@
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(442, 450);
             Controls.Add(tbxDay);
             Controls.Add(btnSelect);
             Controls.Add(tbxInput);
