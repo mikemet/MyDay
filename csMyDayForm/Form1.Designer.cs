@@ -28,21 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            tbxInput = new TextBox();
             btnSelect = new Button();
-            tbxDay = new TextBox();
+            cmbxMonth = new ComboBox();
+            lbYourDay = new Label();
             SuspendLayout();
-            // 
-            // tbxInput
-            // 
-            tbxInput.Location = new Point(166, 126);
-            tbxInput.Name = "tbxInput";
-            tbxInput.Size = new Size(100, 29);
-            tbxInput.TabIndex = 0;
             // 
             // btnSelect
             // 
-            btnSelect.Location = new Point(166, 196);
+            btnSelect.Location = new Point(33, 109);
             btnSelect.Name = "btnSelect";
             btnSelect.Size = new Size(100, 41);
             btnSelect.TabIndex = 1;
@@ -50,21 +43,39 @@
             btnSelect.UseVisualStyleBackColor = true;
             btnSelect.Click += btnSelect_Click;
             // 
-            // tbxDay
+            // cmbxMonth
             // 
-            tbxDay.Location = new Point(166, 258);
-            tbxDay.Name = "tbxDay";
-            tbxDay.Size = new Size(100, 29);
-            tbxDay.TabIndex = 2;
+            cmbxMonth.FormatString = "N0";
+            cmbxMonth.FormattingEnabled = true;
+            cmbxMonth.Items.AddRange(new object[] { "28", "29", "30", "31" });
+            cmbxMonth.Location = new Point(33, 38);
+            cmbxMonth.Name = "cmbxMonth";
+            cmbxMonth.Size = new Size(175, 29);
+            cmbxMonth.Sorted = true;
+            cmbxMonth.TabIndex = 4;
+            cmbxMonth.Text = "Enter number of days";
+            cmbxMonth.SelectedIndexChanged += cmbxMonth_SelectedIndexChanged;
+            // 
+            // lbYourDay
+            // 
+            lbYourDay.AutoSize = true;
+            lbYourDay.BackColor = Color.Teal;
+            lbYourDay.BorderStyle = BorderStyle.FixedSingle;
+            lbYourDay.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            lbYourDay.Location = new Point(33, 189);
+            lbYourDay.Name = "lbYourDay";
+            lbYourDay.Size = new Size(2, 47);
+            lbYourDay.TabIndex = 5;
+            lbYourDay.Click += lbYourDay_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(442, 450);
-            Controls.Add(tbxDay);
+            Controls.Add(lbYourDay);
+            Controls.Add(cmbxMonth);
             Controls.Add(btnSelect);
-            Controls.Add(tbxInput);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -72,9 +83,8 @@
         }
 
         #endregion
-
-        private TextBox tbxInput;
         private Button btnSelect;
-        private TextBox tbxDay;
+        private ComboBox cmbxMonth;
+        private Label lbYourDay;
     }
 }
