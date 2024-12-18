@@ -9,7 +9,7 @@ namespace csMyDayForm
 
         string? input;
         int days;
-        Random rand = new Random();
+        readonly Random rand = new();
         int day;
 
         private void cmbxMonth_SelectedIndexChanged(object sender, EventArgs e)
@@ -24,36 +24,27 @@ namespace csMyDayForm
             lbYourDay.Text = Convert.ToString(day);
         }
 
+        private void lbYourDay_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private int Generate()
         {
             int selectedNumber = Convert.ToInt16(input);
 
-            switch (selectedNumber)
+            days = selectedNumber switch
             {
-                case 28:
-                    days = selectedNumber;
-                    break;
-                case 29:
-                    days = selectedNumber;
-                    break;
-                case 30:
-                    days = selectedNumber;
-                    break;
-                case 31:
-                    days = selectedNumber;
-                    break;
-                default: days = 0; break;
-            }
-
+                28 => selectedNumber,
+                29 => selectedNumber,
+                30 => selectedNumber,
+                31 => selectedNumber,
+                _ => 0,
+            };
             List<int> listDays = [.. Enumerable.Range(1, days)];
             day = rand.Next(listDays.Count);
             
             return day;
-        }
-
-        private void lbYourDay_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }
