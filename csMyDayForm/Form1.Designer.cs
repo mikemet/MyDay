@@ -28,56 +28,72 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             btnSelect = new Button();
             cmbxMonth = new ComboBox();
             lbYourDay = new Label();
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // btnSelect
             // 
-            btnSelect.Location = new Point(33, 109);
+            resources.ApplyResources(btnSelect, "btnSelect");
+            btnSelect.BackColor = Color.PaleGreen;
+            btnSelect.ForeColor = Color.Indigo;
             btnSelect.Name = "btnSelect";
-            btnSelect.Size = new Size(100, 41);
-            btnSelect.TabIndex = 1;
-            btnSelect.Text = "Select Day";
-            btnSelect.UseVisualStyleBackColor = true;
+            btnSelect.UseVisualStyleBackColor = false;
             btnSelect.Click += btnSelect_Click;
             // 
             // cmbxMonth
             // 
+            cmbxMonth.BackColor = SystemColors.ActiveCaption;
+            resources.ApplyResources(cmbxMonth, "cmbxMonth");
             cmbxMonth.FormatString = "N0";
             cmbxMonth.FormattingEnabled = true;
-            cmbxMonth.Items.AddRange(new object[] { "28", "29", "30", "31" });
-            cmbxMonth.Location = new Point(33, 38);
+            cmbxMonth.Items.AddRange(new object[] { resources.GetString("cmbxMonth.Items"), resources.GetString("cmbxMonth.Items1"), resources.GetString("cmbxMonth.Items2"), resources.GetString("cmbxMonth.Items3") });
             cmbxMonth.Name = "cmbxMonth";
-            cmbxMonth.Size = new Size(175, 29);
             cmbxMonth.Sorted = true;
-            cmbxMonth.TabIndex = 4;
-            cmbxMonth.Text = "Enter number of days";
             cmbxMonth.SelectedIndexChanged += cmbxMonth_SelectedIndexChanged;
             // 
             // lbYourDay
             // 
-            lbYourDay.AutoSize = true;
-            lbYourDay.BackColor = Color.Teal;
-            lbYourDay.BorderStyle = BorderStyle.FixedSingle;
-            lbYourDay.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            lbYourDay.Location = new Point(33, 189);
+            lbYourDay.BackColor = Color.MintCream;
+            lbYourDay.BorderStyle = BorderStyle.Fixed3D;
+            resources.ApplyResources(lbYourDay, "lbYourDay");
+            lbYourDay.ForeColor = Color.Green;
             lbYourDay.Name = "lbYourDay";
-            lbYourDay.Size = new Size(2, 47);
-            lbYourDay.TabIndex = 5;
             lbYourDay.Click += lbYourDay_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.Great;
+            resources.ApplyResources(pictureBox1, "pictureBox1");
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.Great;
+            resources.ApplyResources(pictureBox2, "pictureBox2");
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.TabStop = false;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(9F, 21F);
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(442, 450);
+            BackColor = Color.FromArgb(255, 224, 192);
+            Controls.Add(pictureBox2);
+            Controls.Add(pictureBox1);
             Controls.Add(lbYourDay);
             Controls.Add(cmbxMonth);
             Controls.Add(btnSelect);
             Name = "Form1";
-            Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -86,5 +102,7 @@
         private Button btnSelect;
         private ComboBox cmbxMonth;
         private Label lbYourDay;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
     }
 }
