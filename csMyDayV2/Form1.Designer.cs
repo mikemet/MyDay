@@ -52,6 +52,8 @@
             // button1
             // 
             button1.BackColor = Color.FromArgb(255, 224, 192);
+            button1.FlatAppearance.BorderColor = Color.FromArgb(0, 0, 192);
+            button1.FlatAppearance.BorderSize = 2;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 204);
             button1.ForeColor = Color.Navy;
@@ -108,8 +110,13 @@
             Controls.Add(label1);
             Controls.Add(button1);
             Controls.Add(comboBox1);
+            FormBorderStyle = FormBorderStyle.Fixed3D;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
             Name = "Form1";
+            SizeGripStyle = SizeGripStyle.Show;
             Text = "Твой ДЕНЬ!";
+            TopMost = true;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
