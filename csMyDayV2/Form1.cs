@@ -9,7 +9,7 @@ namespace csMyDayV2
 
         string? Month;
         int days, day;
-        Random rand = new Random();
+        Random rand = new();
 
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -45,6 +45,11 @@ namespace csMyDayV2
 
             List<int> ListDays = [..Enumerable.Range(1, days)];
             day = rand.Next(ListDays.Count);
+
+            if(day == 0)
+            {
+                ++day;
+            }
 
             return day;
         }
